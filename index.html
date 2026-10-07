@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SNOW CHOP | Seasonal Snow Removal — Fort St. John, BC</title>
+<meta name="description" content="Snow Chop — Fort St. John's trusted seasonal snow removal. Driveway auto-cleared after every 2 inches of snow, Oct 15 to Apr 15. Single $699, Double $799, Triple $899. Call 888-814-5296.">
+<style>
+  :root { --navy:#0d2137; --navy2:#14324f; --ice:#3fb3dd; --ice-d:#1d8fb0; --paper:#f2f7fb; --ink:#10202f; --amber:#f5a623; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Segoe UI',system-ui,-apple-system,sans-serif; color:var(--ink); background:var(--paper); line-height:1.6; }
+  .wrap { max-width:1120px; margin:0 auto; padding:0 22px; }
+
+  header { position:sticky; top:0; z-index:50; background:rgba(13,33,55,.97); backdrop-filter:blur(8px); }
+  .nav { display:flex; align-items:center; justify-content:space-between; padding:14px 0; }
+  .logo { font-weight:800; font-size:1.3rem; color:#fff; text-decoration:none; letter-spacing:.5px; }
+  .logo span { color:var(--ice); }
+  .nav-links { display:flex; gap:26px; align-items:center; }
+  .nav-links a { text-decoration:none; color:#dbe7f0; font-weight:600; font-size:.95rem; }
+  .nav-links a:hover { color:var(--ice); }
+  .btn { display:inline-block; background:var(--amber); color:#1a1206 !important; padding:12px 28px; border-radius:999px; font-weight:800; text-decoration:none; transition:.2s; border:none; cursor:pointer; font-size:1rem; }
+  .btn:hover { transform:translateY(-1px); filter:brightness(1.06); }
+  @media(max-width:760px){ .nav-links a:not(.btn){ display:none; } }
+
+  .hero { position:relative; min-height:88vh; display:flex; align-items:flex-end; color:#fff; overflow:hidden; }
+  .hero-bg { position:absolute; inset:0; }
+  .hero-bg img { width:100%; height:100%; object-fit:cover; display:block; }
+  .hero-shade { position:absolute; inset:0; background:linear-gradient(to top, rgba(6,15,26,.86) 0%, rgba(6,15,26,.32) 50%, rgba(6,15,26,.22) 100%); }
+  .hero-inner { position:relative; padding:70px 0 80px; width:100%; }
+  .urgent { display:inline-block; background:var(--amber); color:#1a1206; font-weight:800; padding:8px 20px; border-radius:999px; font-size:.9rem; margin-bottom:18px; }
+  .hero h1 { font-size:clamp(2.3rem,5.5vw,4rem); line-height:1.08; font-weight:800; max-width:800px; text-shadow:0 2px 20px rgba(0,0,0,.5); }
+  .hero h1 em { color:var(--ice); font-style:normal; }
+  .hero p.lead { font-size:1.18rem; max-width:660px; margin:18px 0 28px; color:#e6eef5; }
+  .hero-cta-row { display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
+  .phone-big { font-size:1.5rem; font-weight:800; color:#fff; text-decoration:none; }
+  .phone-big:hover { color:var(--ice); }
+
+  section { padding:76px 0; }
+  .kicker { color:var(--ice-d); font-weight:800; text-transform:uppercase; letter-spacing:2px; font-size:.82rem; margin-bottom:10px; }
+  h2 { font-size:clamp(1.7rem,3.5vw,2.5rem); font-weight:800; margin-bottom:14px; line-height:1.2; }
+  .sec-sub { color:#4c6070; max-width:700px; margin-bottom:40px; font-size:1.05rem; }
+
+  .pricing { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:22px; }
+  .price-card { background:#fff; border-radius:20px; overflow:hidden; border:2px solid #dbe7f0; text-align:center; transition:.2s; position:relative; }
+  .price-card:hover { transform:translateY(-4px); box-shadow:0 16px 44px rgba(13,33,55,.14); }
+  .price-card.popular { border-color:var(--amber); }
+  .price-card .tag { background:var(--amber); color:#1a1206; font-weight:800; font-size:.78rem; padding:6px; text-transform:uppercase; letter-spacing:1px; }
+  .price-card img { width:100%; height:150px; object-fit:cover; display:block; }
+  .price-card .body { padding:24px 22px 30px; }
+  .price-card h3 { font-size:1.15rem; margin-bottom:6px; }
+  .was { text-decoration:line-through; color:#93a5b5; font-size:1rem; }
+  .now { font-size:2.2rem; font-weight:800; color:var(--navy); }
+  .save { display:inline-block; background:#e6f4ea; color:#1d7a34; font-weight:700; font-size:.82rem; padding:4px 14px; border-radius:999px; margin-top:8px; }
+  .per { font-size:.85rem; color:#6b7a70; margin-top:6px; }
+
+  .steps { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:22px; }
+  .step { background:#fff; border-radius:18px; padding:30px 26px; border:1px solid #dbe7f0; text-align:center; }
+  .step .n { font-size:2.4rem; font-weight:800; color:var(--ice); }
+  .step h3 { margin:10px 0 8px; }
+  .step p { color:#4c6070; font-size:.95rem; }
+
+  .quotes { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:22px; }
+  blockquote { background:#fff; border-radius:18px; padding:28px 26px; border:1px solid #dbe7f0; font-size:.95rem; color:#33413a; }
+  blockquote footer { margin-top:14px; font-weight:700; color:var(--ink); font-style:normal; }
+  .stars { color:var(--amber); font-size:1.05rem; letter-spacing:2px; }
+
+  .faq details { background:#fff; border:1px solid #dbe7f0; border-radius:14px; padding:18px 22px; margin-bottom:12px; }
+  .faq summary { font-weight:700; cursor:pointer; font-size:1.02rem; }
+  .faq p { margin-top:10px; color:#4c6070; font-size:.96rem; }
+
+  .contact-band { background:linear-gradient(135deg, var(--navy) 0%, var(--navy2) 100%); color:#fff; border-radius:24px; padding:60px 32px; }
+  .contact-band h2 { color:#fff; }
+  .contact-band p { color:#b9cbda; max-width:600px; margin:12px 0 28px; }
+  form { max-width:560px; }
+  form .row { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media(max-width:600px){ form .row{ grid-template-columns:1fr; } }
+  form label { display:block; font-weight:600; font-size:.9rem; margin:12px 0 6px; color:#e6eef5; }
+  form input, form select, form textarea { width:100%; padding:12px 14px; border:1.5px solid #33506b; border-radius:12px; font-size:1rem; font-family:inherit; background:#0d2137; color:#fff; }
+  form input::placeholder, form textarea::placeholder { color:#7d93a8; }
+  form textarea { min-height:90px; resize:vertical; }
+  form select option { background:#0d2137; }
+
+  footer { background:var(--navy); color:#8fa5b8; padding:36px 0; font-size:.92rem; }
+  footer .wrap { display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px; align-items:center; }
+  footer a { color:#fff; font-weight:700; text-decoration:none; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#">❄️ SNOW <span>CHOP</span></a>
+    <nav class="nav-links">
+      <a href="#pricing">Pricing</a>
+      <a href="#how">How It Works</a>
+      <a href="#faq">FAQ</a>
+      <a href="#reviews">Reviews</a>
+      <a class="btn" href="tel:+18888145296">888-814-5296</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-bg"><img src="photos/hero-tractor.jpg" alt="Tractor with snowblower clearing a Fort St. John driveway"></div>
+  <div class="hero-shade"></div>
+  <div class="wrap hero-inner">
+    <span class="urgent">⏳ Season starts Oct 15 — limited spots available</span>
+    <h1>Fort St. John's <em>hassle-free</em> seasonal snow removal.</h1>
+    <p class="lead">Your driveway, automatically cleared after every 2 inches of snowfall — October 15th to April 15th. No calling, no shoveling, no stress.</p>
+    <div class="hero-cta-row">
+      <a class="btn" href="#pricing">See Seasonal Pricing</a>
+      <a class="phone-big" href="tel:+18888145296">📞 888-814-5296</a>
+    </div>
+  </div>
+</div>
+
+<section id="pricing">
+  <div class="wrap">
+    <div class="kicker">Seasonal Pricing</div>
+    <h2>One payment. Zero shoveling. All winter.</h2>
+    <p class="sec-sub">Pay once and save 10% — or spread it out with flexible installments. Senior rates available for clients 60+.</p>
+    <div class="pricing">
+      <div class="price-card popular">
+        <div class="tag">Most Popular</div>
+        <img src="photos/driveway.jpg" alt="Cleared single driveway">
+        <div class="body"><h3>Single Driveway</h3><div class="was">$776.67</div><div class="now">$699</div><div class="save">Pay once &amp; SAVE 10%</div><div class="per">per season + taxes</div></div>
+      </div>
+      <div class="price-card">
+        <img src="photos/driveway.jpg" alt="Cleared double driveway">
+        <div class="body"><h3>Double Driveway</h3><div class="was">$887.78</div><div class="now">$799</div><div class="save">Pay once &amp; SAVE 10%</div><div class="per">per season + taxes</div></div>
+      </div>
+      <div class="price-card">
+        <img src="photos/driveway.jpg" alt="Cleared triple driveway">
+        <div class="body"><h3>Triple Driveway</h3><div class="was">$998.89</div><div class="now">$899</div><div class="save">Pay once &amp; SAVE 10%</div><div class="per">per season + taxes</div></div>
+      </div>
+      <div class="price-card">
+        <img src="photos/walkway.jpg" alt="Shoveled walkway to front door">
+        <div class="body"><h3>Walkway Add-On</h3><div class="was">$776.67</div><div class="now">$699</div><div class="save">Pay once &amp; SAVE 10%</div><div class="per">per season + taxes</div></div>
+      </div>
+    </div>
+    <p style="margin-top:22px; color:#4c6070; font-size:.95rem;">Walkways are serviced the same day your driveway is cleared — sidewalks, garage aprons, front-door paths, mailbox and hydrant clearance. Keeps you bylaw-compliant all winter.</p>
+  </div>
+</section>
+
+<section id="how" style="background:#fff;">
+  <div class="wrap">
+    <div class="kicker">How It Works</div>
+    <h2>Registered in minutes. Relax all winter.</h2>
+    <div class="steps" style="margin-top:28px;">
+      <div class="step"><div class="n">1</div><h3>Register</h3><p>Fill out the form below. A team member contacts you within 24 hours to finalize setup.</p></div>
+      <div class="step"><div class="n">2</div><h3>Sign the contract</h3><p>We email your snow removal contract — sign it online, no printing, no hassle.</p></div>
+      <div class="step"><div class="n">3</div><h3>Enjoy winter</h3><p>That's it. We handle every snowfall from Oct 15 to Apr 15 while you stay warm inside.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="kicker">FAQ</div>
+    <h2>Questions, answered.</h2>
+    <div class="faq" style="margin-top:28px; max-width:800px;">
+      <details><summary>How often will my driveway get cleared?</summary><p>Our team runs the snow route whenever accumulation reaches 2 or more inches — automatically, no need to call.</p></details>
+      <details><summary>What times do you come by?</summary><p>Between 8:00 AM and 8:00 PM, per local noise bylaws — and late enough in the morning for you to move vehicles out first.</p></details>
+      <details><summary>Can I leave my vehicle in the driveway?</summary><p>Absolutely. Operators keep a minimum 2-foot distance from vehicles and clear the path out to the roadway.</p></details>
+      <details><summary>What equipment do you use?</summary><p>Tractors with snowblowers — efficient clearing with snow safely piled on front lawns.</p></details>
+      <details><summary>Do you offer payment plans?</summary><p>Yes — one-time seasonal payment (save 10%) or spread-out installments. Senior rates available for clients over 60.</p></details>
+      <details><summary>Which areas do you serve?</summary><p>Fort St. John city limits for snow removal at this time.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" style="background:#fff;">
+  <div class="wrap">
+    <div class="kicker">Reviews</div>
+    <h2>Fort St. John keeps hiring Kevin back.</h2>
+    <div class="quotes" style="margin-top:28px;">
+      <blockquote><span class="stars">★★★★★</span><br>"Kevin always does a great job. Makes sure the job is done to its fullest. He does my snow removal, lawn sweeping — always pleased. Will be hiring him for more lawn help in the future."<footer>Brooklyn Moore</footer></blockquote>
+      <blockquote><span class="stars">★★★★★</span><br>"Kevin did a great job clearing our driveway. Courteous, and I would recommend his services to all who need their driveways cleared."<footer>Peter Fehr</footer></blockquote>
+      <blockquote><span class="stars">★★★★★</span><br>"Kevin always does an amazing job keeping our lawn beautiful and clearing snow, no matter the season. Respectful, kind, and very professional. Highly recommend!"<footer>Cassandra Baker</footer></blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="register" style="padding-top:0;">
+  <div class="wrap">
+    <div class="contact-band">
+      <div class="kicker" style="color:var(--ice);">Register for the Season</div>
+      <h2>Lock in your spot before Oct 15.</h2>
+      <p>Fill this out and a team member will contact you within 24 hours. Prefer to talk? Call <a href="tel:+18888145296" style="color:#fff; font-weight:800;">888-814-5296</a>.</p>
+      <form id="regForm">
+        <div class="row">
+          <div><label>First name<input required name="first" placeholder="Jane"></label></div>
+          <div><label>Last name<input required name="last" placeholder="Doe"></label></div>
+        </div>
+        <div class="row">
+          <div><label>Email<input required name="email" type="email" placeholder="jane@email.com"></label></div>
+          <div><label>Phone<input required name="phone" type="tel" placeholder="(250) 555-0123"></label></div>
+        </div>
+        <label>Address (must be within FSJ city limits)<input required name="address" placeholder="1234 100 Ave, Fort St. John"></label>
+        <div class="row">
+          <div><label>Driveway size<select name="driveway"><option>Single</option><option>Double</option><option>Triple</option></select></label></div>
+          <div><label>Walkway add-on?<select name="walkway"><option>No</option><option>Yes — add walkways ($699)</option></select></label></div>
+        </div>
+        <label>Driveway surface type<input name="surface" placeholder="e.g. Asphalt, gravel"></label>
+        <label>Additional information<textarea name="notes" placeholder="Gate codes, pets, anything we should know..."></textarea></label>
+        <button class="btn" type="submit" style="margin-top:18px;">Submit Registration</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><strong style="color:#fff;">❄️ SNOW CHOP</strong> · Fort St. John, BC · <a href="tel:+18888145296">888-814-5296</a> · <a href="tel:+12502642807">250-264-2807</a></div>
+    <div>Seasonal snow removal · Oct 15 – Apr 15</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('regForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const f = new FormData(e.target);
+  const body = encodeURIComponent(
+    'SNOW CHOP seasonal registration\n\n'+
+    'Name: '+f.get('first')+' '+f.get('last')+'\n'+
+    'Email: '+f.get('email')+'\nPhone: '+f.get('phone')+'\n'+
+    'Address: '+f.get('address')+'\nDriveway: '+f.get('driveway')+'\n'+
+    'Walkway add-on: '+f.get('walkway')+'\nSurface: '+f.get('surface')+'\n\nNotes:\n'+f.get('notes'));
+  window.location.href = 'mailto:?subject='+encodeURIComponent('Snow Chop registration — '+f.get('first')+' '+f.get('last'))+'&body='+body;
+  alert('Thanks! Your registration details are ready to send — just hit send in your mail app, or call 888-814-5296.');
+});
+</script>
+</body>
+</html>
